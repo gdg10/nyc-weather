@@ -3,10 +3,11 @@ import logo from "./statue-of-liberty-icon.jpg";
 import "./App.css";
 import CurrentWeather from "./CurrentWeather";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Spinner} from "react-bootstrap";
 
 class App extends Component {
   state = {
-    currentWeather: null
+    currentWeather: null,
   };
 
   componentDidMount() {
@@ -25,9 +26,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
           {this.state.currentWeather === null ? (
-            <p></p>
+            <Spinner animation="border" variant="light" />
           ) : (
             <CurrentWeather currentWeather={this.state.currentWeather} />
           )}
