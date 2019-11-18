@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import logo from "./statue-of-liberty-icon.jpg";
 import "./App.css";
 import CurrentWeather from "./CurrentWeather";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
   state = {
@@ -24,7 +25,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
           {this.state.currentWeather === null ? (
             <p></p>
           ) : (
