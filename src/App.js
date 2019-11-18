@@ -10,7 +10,7 @@ class App extends Component {
 
   componentDidMount() {
     fetch(
-      "http://api.openweathermap.org/data/2.5/weather?id=5128581&APPID=19933ade180f83fa38132ef04a04229a&units=imperial"
+      "https://api.openweathermap.org/data/2.5/weather?id=5128581&APPID=19933ade180f83fa38132ef04a04229a&units=imperial"
     )
       .then(res => res.json())
       .then(data => {
