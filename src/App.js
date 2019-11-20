@@ -1,13 +1,57 @@
 import React, { Component } from "react";
-import logo from "./statue-of-liberty-icon.jpg";
 import "./App.css";
 import CurrentWeather from "./CurrentWeather";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Spinner} from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Spinner } from "react-bootstrap";
+import styled from "styled-components";
+import NewYork from "./nyc-background.gif";
+
+const AppWrapper = styled.div`
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: green;
+`;
+
+const TopContainer = styled.div`
+  height: 50vh;
+  width: 100vw;
+  float: left;
+  background-color: orange;
+`;
+
+const WeatherContainer = styled.header`
+  height: 50vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  background-color: white;
+  float: left;
+`;
+
+const GifContainer = styled.header`
+  background-image: url(${NewYork});
+  background-size: auto;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  height: 50vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  float: left;
+`;
 
 class App extends Component {
   state = {
-    currentWeather: null,
+    currentWeather: null
   };
 
   componentDidMount() {
@@ -24,15 +68,18 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          {this.state.currentWeather === null ? (
+      <AppWrapper>
+        <TopContainer/>
+        <WeatherContainer>
+          {/* {this.state.currentWeather === null ? (
             <Spinner animation="border" variant="light" />
           ) : (
             <CurrentWeather currentWeather={this.state.currentWeather} />
-          )}
-        </header>
-      </div>
+          )} */}
+        </WeatherContainer>
+        <GifContainer/>
+        <WeatherContainer />
+      </AppWrapper>
     );
   }
 }
