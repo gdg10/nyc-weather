@@ -9,17 +9,17 @@ import NewYork from "./nyc-background.gif";
 const AppWrapper = styled.div`
   min-height: 100vh;
   min-width: 100vw;
-  background-color: green;
+  background-color: #fcfcfc;
 `;
 
 const TopContainer = styled.div`
   height: 50vh;
   width: 100vw;
   float: left;
-  background-color: orange;
+  background-color: #fcfcfc;
 `;
 
-const WeatherContainer = styled.header`
+const PlaceHolderContainer = styled.header`
   height: 50vh;
   width: 20vw;
   display: flex;
@@ -28,7 +28,7 @@ const WeatherContainer = styled.header`
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  background-color: white;
+  background-color: #fcfcfc;
   float: left;
 `;
 
@@ -45,7 +45,7 @@ const GifContainer = styled.header`
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fcfcfc;
   float: left;
 `;
 
@@ -69,16 +69,16 @@ class App extends Component {
   render() {
     return (
       <AppWrapper>
-        <TopContainer/>
-        <WeatherContainer>
-          {/* {this.state.currentWeather === null ? (
+        <TopContainer>
+        {this.state.currentWeather === null ? (
             <Spinner animation="border" variant="light" />
           ) : (
             <CurrentWeather currentWeather={this.state.currentWeather} />
-          )} */}
-        </WeatherContainer>
+          )}
+        </TopContainer>
+        <PlaceHolderContainer />
         <GifContainer/>
-        <WeatherContainer />
+        <PlaceHolderContainer />
       </AppWrapper>
     );
   }
