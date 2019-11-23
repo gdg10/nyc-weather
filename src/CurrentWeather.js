@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
 import { fadeIn, flipInX } from "react-animations";
 import IconDock from "./IconDock";
+import GoogleForm from "./GoogleForm";
 
 const fadeAnimation = keyframes`${fadeIn}`;
 const bounceAnimation = keyframes`${flipInX}`;
@@ -46,7 +47,7 @@ const today = new Date();
 const COPY = {
   GREETING: "Hello, Garrett",
   WEATHER: (temp, condition) => {
-    return temp + "° and " + condition.toLowerCase() + " in New York City";
+    return temp + "° and " + condition.toLowerCase() + " in Midtown";
   },
   DATE: today => {
     return (
@@ -67,6 +68,11 @@ const CurrentWeather = ({ weather }) => {
             </SubGreeting1>
           </Col>
         </Row>
+        {/* <Row>
+          <Col xs={5}>
+            <GoogleForm />
+          </Col>
+        </Row> */}
         <Row>
           <Col>
             <BounceAnimationWrapper>
@@ -75,7 +81,9 @@ const CurrentWeather = ({ weather }) => {
           </Col>
         </Row>
         <Row>
-          <Col><SubGreeting2>{COPY.DATE(today)}</SubGreeting2></Col>
+          <Col>
+            <SubGreeting2>{COPY.DATE(today)}</SubGreeting2>
+          </Col>
         </Row>
       </FadeAnimationWrapper>
     </Container>
