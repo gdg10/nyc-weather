@@ -1,7 +1,6 @@
+
 import React, { Component } from "react";
-import "./App.css";
 import CurrentWeather from "./CurrentWeather";
-import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
 import NewYorkBackground from "./MidTown.jpg";
 
@@ -13,7 +12,7 @@ const ViewPortPage = styled.div`
 
 const HeroContainer = styled.header`
   font-family: 'Marvel', sans-serif;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.752), rgba(225, 225, 225, 0.03)),url(${NewYorkBackground});
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(225, 225, 225, 0.03)),url(${NewYorkBackground});
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: auto;
   background-size: cover; /* Resize the background image to cover the entire container */
