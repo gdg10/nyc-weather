@@ -2,51 +2,29 @@ import React, { Component } from "react";
 import "./App.css";
 import CurrentWeather from "./CurrentWeather";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Spinner } from "react-bootstrap";
 import styled from "styled-components";
-import NewYork from "./nyc-background.gif";
+import NewYorkBackground from "./MidTown.jpg";
 
-const AppWrapper = styled.div`
+const ViewPortPage = styled.div`
   min-height: 100vh;
   min-width: 100vw;
-  background-color: #fcfcfc;
+  background-color: black;
 `;
 
-const TopContainer = styled.div`
-  height: 50vh;
-  width: 100vw;
-  float: left;
-  background-color: #fcfcfc;
-`;
-
-const PlaceHolderContainer = styled.header`
-  height: 50vh;
-  width: 20vw;
-  display: flex;
-  flex-direction: column;
-  background-position: center;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  background-color: #fcfcfc;
-  float: left;
-`;
-
-const GifContainer = styled.header`
-  background-image: url(${NewYork});
-  background-size: auto;
+const HeroContainer = styled.header`
+  font-family: 'Marvel', sans-serif;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.752), rgba(225, 225, 225, 0.03)),url(${NewYorkBackground});
   background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: auto;
   background-size: cover; /* Resize the background image to cover the entire container */
-  height: 50vh;
-  width: 60vw;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   background-position: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #fcfcfc;
-  float: left;
+  text-align: center;
+  color: white;
 `;
 
 class App extends Component {
@@ -68,18 +46,17 @@ class App extends Component {
 
   render() {
     return (
-      <AppWrapper>
-        <TopContainer>
-        {this.state.currentWeather === null ? (
-            <Spinner animation="border" variant="light" />
-          ) : (
-            <CurrentWeather currentWeather={this.state.currentWeather} />
-          )}
-        </TopContainer>
-        <PlaceHolderContainer />
-        <GifContainer/>
-        <PlaceHolderContainer />
-      </AppWrapper>
+      <React.Fragment>
+        <ViewPortPage>
+          <HeroContainer>
+            {this.state.currentWeather === null ? (
+              ' '
+            ) : (
+              <CurrentWeather weather={this.state.currentWeather} />
+            )}
+          </HeroContainer>
+        </ViewPortPage>
+      </React.Fragment>
     );
   }
 }
