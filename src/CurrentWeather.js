@@ -60,7 +60,7 @@ const CurrentWeather = ({ weather }) => {
             <SubGreeting1>
               {COPY.WEATHER(weather.main.temp, weather.weather[0].main)}
             </SubGreeting1>
-            <SubGreeting2>{COPY.DATE(today)}</SubGreeting2>
+            {/* <SubGreeting2>{COPY.DATE(today)}</SubGreeting2> */}
           </AnimationWrapper>
         </Col>
       </Row>
