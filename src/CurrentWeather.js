@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
 import { fadeIn, flipInX } from "react-animations";
 import IconDock from "./IconDock";
-import GoogleForm from "./GoogleForm";
+// import GoogleForm from "./GoogleForm";
 import Clock from 'react-live-clock';
 
 const fadeAnimation = keyframes`${fadeIn}`;
@@ -41,8 +41,6 @@ const SubGreeting2 = styled.h2`
   font-weight: normal;
   color: lightgrey;
 `;
-
-const today = new Date();
 
 const COPY = {
   GREETING: "Hello, Garrett",
