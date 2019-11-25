@@ -3,9 +3,12 @@ import styled from "styled-components";
 import gitIcon from "./gitIcon.png";
 import jiraIcon from "./jira_icon_white.png";
 import gmailIcon from "./gmail_icon_white.png";
+import calendarIcon from "./calendar.png";
+import paperIcon from "./white-sheets.svg";
 
-const IconUrlList = [gitIcon, jiraIcon, gmailIcon, gmailIcon];
+const IconUrlList = [calendarIcon, gitIcon, jiraIcon, gmailIcon, paperIcon];
 const LinkUrlList = [
+  "https://calendar.google.com/calendar/r",
   "https://github.quartethealth.com/",
   "https://jira.quartethealth.com/secure/Dashboard.jspa",
   "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox",
