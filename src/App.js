@@ -1,18 +1,25 @@
-
 import React, { Component } from "react";
 import CurrentWeather from "./CurrentWeather";
 import styled from "styled-components";
 import NewYorkBackground from "./MidTown.jpg";
+import NewYorkCirlce from "./NYCircle.svg";
+import LibertyHand from "./nyc-background.gif";
+import Statue from "./statue-of-liberty-icon.jpg";
 
 const ViewPortPage = styled.div`
   min-height: 100vh;
   min-width: 100vw;
-  background-color: black;
+  background-color: white;
 `;
 
 const HeroContainer = styled.header`
-  font-family: 'Marvel', sans-serif;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(225, 225, 225, 0.03)),url(${NewYorkBackground});
+  font-family: "Marvel", sans-serif;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9),
+      rgba(225, 225, 225, 0.03)
+    ),
+    url(${NewYorkBackground});
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: auto;
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -49,7 +56,7 @@ class App extends Component {
         <ViewPortPage>
           <HeroContainer>
             {this.state.currentWeather === null ? (
-              ' '
+              " "
             ) : (
               <CurrentWeather weather={this.state.currentWeather} />
             )}
