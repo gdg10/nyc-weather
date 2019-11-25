@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import CurrentWeather from "./CurrentWeather";
 import styled from "styled-components";
 import NewYorkHero0 from "./MidTown.jpg";
-import NewYorkHero1 from "./NewYorkHero1.jpg"
-import NewYorkHero2 from "./NewYorkHero2.jpg"
-import NewYorkHero3 from "./NewYorkHero3.jpeg"
-import NewYorkHero4 from "./NewYorkHero4.jpg"
-import NewYorkHero5 from "./NewYorkHero5.jpg"
+import NewYorkHero1 from "./NewYorkHero1.jpg";
+import NewYorkHero2 from "./NewYorkHero2.jpg";
+import NewYorkHero3 from "./NewYorkHero3.jpeg";
+import NewYorkHero4 from "./NewYorkHero4.jpg";
+import NewYorkHero5 from "./NewYorkHero5.jpg";
+import NewYorkHero6 from "./NewYorkHero6.jpeg";
 
-const heroImages = [NewYorkHero0, NewYorkHero1, NewYorkHero2, NewYorkHero3, NewYorkHero4, NewYorkHero5];
+const heroImages = [NewYorkHero0, NewYorkHero1, NewYorkHero2, NewYorkHero3, NewYorkHero4, NewYorkHero5, NewYorkHero6];
 const ViewPortPage = styled.div`
   min-height: 100vh;
   min-width: 100vw;
@@ -22,7 +23,7 @@ const HeroContainer = styled.header`
       rgba(0, 0, 0, 0.94),
       rgba(225, 225, 225, 0.03)
     ),
-    url(${heroImages[(Math.floor(Math.random()*5))]});
+    url(${heroImages[(Math.floor(Math.random()*heroImages.length))]});
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: auto;
   background-size: cover; /* Resize the background image to cover the entire container */
