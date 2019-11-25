@@ -9,14 +9,14 @@ import Statue from "./statue-of-liberty-icon.jpg";
 const ViewPortPage = styled.div`
   min-height: 100vh;
   min-width: 100vw;
-  background-color: white;
+  background-color: black;
 `;
 
 const HeroContainer = styled.header`
   font-family: "Marvel", sans-serif;
   background-image: linear-gradient(
       to right,
-      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.94),
       rgba(225, 225, 225, 0.03)
     ),
     url(${NewYorkBackground});
