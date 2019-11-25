@@ -4,11 +4,12 @@ import gitIcon from "./gitIcon.png";
 import jiraIcon from "./jira_icon_white.png";
 import gmailIcon from "./gmail_icon_white.png";
 
-const IconUrlList = [gitIcon, jiraIcon, gmailIcon];
+const IconUrlList = [gitIcon, jiraIcon, gmailIcon, gmailIcon];
 const LinkUrlList = [
   "https://github.quartethealth.com/",
   "https://jira.quartethealth.com/secure/Dashboard.jspa",
-  "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"
+  "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox",
+  "http://careteam.quartethealth.local:64832/"
 ];
 const DocWrapper = styled.div``;
 const LinkWrapper = styled.a``;
@@ -21,7 +22,7 @@ const Icon = styled.img`
 
 const StyledIconConstructor = (linkURL, iconURL, aKey) => {
   return (
-    <LinkWrapper href={linkURL} target="_blank" key={"unique-" + aKey}>
+    <LinkWrapper href={linkURL} key={"unique-" + aKey}>
       <Icon src={iconURL} />
     </LinkWrapper>
   );
