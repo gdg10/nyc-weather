@@ -64,7 +64,7 @@ const CurrentWeather = ({ weather }) => {
             <SubGreeting2><Clock format={'dddd, MMMM Mo'} timezone={'US/Eastern'} /></SubGreeting2>
             <Greeting>{COPY.GREETING}</Greeting>
             <SubGreeting1>
-              {COPY.WEATHER(weather.main.temp, weather.weather[0].main)}
+              {COPY.WEATHER(Math.floor(weather.main.temp), weather.weather[0].main)}
             </SubGreeting1>
           </Col>
         </Row>
