@@ -9,7 +9,15 @@ import NewYorkHero4 from "./NewYorkHero4.jpg";
 import NewYorkHero5 from "./NewYorkHero5.jpg";
 import NewYorkHero6 from "./NewYorkHero6.jpeg";
 
-const heroImages = [NewYorkHero0, NewYorkHero1, NewYorkHero2, NewYorkHero3, NewYorkHero4, NewYorkHero5, NewYorkHero6];
+const heroImages = [
+  NewYorkHero0,
+  NewYorkHero1,
+  NewYorkHero2,
+  NewYorkHero3,
+  NewYorkHero4,
+  NewYorkHero5,
+  NewYorkHero6
+];
 const ViewPortPage = styled.div`
   min-height: 100vh;
   min-width: 100vw;
@@ -23,7 +31,7 @@ const HeroContainer = styled.header`
       rgba(0, 0, 0, 0.94),
       rgba(225, 225, 225, 0.03)
     ),
-    url(${heroImages[(Math.floor(Math.random()*heroImages.length))]});
+    url(${heroImages[Math.floor(Math.random() * heroImages.length)]});
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: auto;
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -36,6 +44,10 @@ const HeroContainer = styled.header`
   text-align: center;
   color: white;
 `;
+
+const myStyle = {
+  backgroundColor: "green"
+};
 
 class App extends Component {
   state = {
@@ -58,6 +70,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <ViewPortPage>
+          }>
           <HeroContainer>
             {this.state.currentWeather === null ? (
               " "

@@ -6,13 +6,15 @@ import gmailIcon from "./gmail_icon_white.png";
 import calendarIcon from "./calendar.png";
 import paperIcon from "./white-sheets.svg";
 
-const IconUrlList = [calendarIcon, gitIcon, jiraIcon, gmailIcon, paperIcon];
+const IconUrlList = [calendarIcon, calendarIcon, gitIcon, jiraIcon, gmailIcon, paperIcon, jiraIcon];
 const LinkUrlList = [
+  "https://calendar.google.com/calendar/r",
   "https://calendar.google.com/calendar/r",
   "https://github.quartethealth.com/",
   "https://jira.quartethealth.com/secure/Dashboard.jspa",
   "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox",
-  "http://careteam.quartethealth.local:64832/"
+  "http://careteam.quartethealth.local:64832/",
+  "https://docs.google.com/spreadsheets/d/1vPdZGCKu5GLY61beVZI13CARDV4-maKZqRvolyxJffk/edit#gid=1268723712"
 ];
 const DocWrapper = styled.div``;
 const LinkWrapper = styled.a``;
