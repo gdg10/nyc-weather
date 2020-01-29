@@ -70,7 +70,6 @@ class App extends Component {
     return (
       <React.Fragment>
         <ViewPortPage>
-          }>
           <HeroContainer>
             {this.state.currentWeather === null ? (
               " "
