@@ -19,7 +19,7 @@ const LinkUrlList = [
   "https://github.quartethealth.com/",
   "https://jira.quartethealth.com/secure/Dashboard.jspa",
   "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox",
-  "http://careteam.quartethealth.local:64832/",
+  "http://localhost:9000/",
   "https://docs.google.com/spreadsheets/d/1vPdZGCKu5GLY61beVZI13CARDV4-maKZqRvolyxJffk/edit#gid=1268723712"
 ];
 const DocWrapper = styled.div``;
@@ -34,7 +34,7 @@ const Icon = styled.img`
 const StyledIconConstructor = (linkURL, iconURL, aKey) => {
   return (
     <LinkWrapper href={linkURL} key={"unique-" + aKey}>
-      <Icon src={iconURL} />
+      <Icon src={iconURL} />>
     </LinkWrapper>
   );
 };

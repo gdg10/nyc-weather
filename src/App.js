@@ -46,10 +46,6 @@ const HeroContainer = styled.header`
   color: white;
 `;
 
-const myStyle = {
-  backgroundColor: "green"
-};
-
 class App extends Component {
   state = {
     currentWeather: null
