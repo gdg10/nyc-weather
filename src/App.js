@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Fade from 'react-bootstrap/Fade';
 import CurrentWeather from "./CurrentWeather";
 import styled from "styled-components";
 import NewYorkHero0 from "./MidTown.jpg";
@@ -68,7 +69,7 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <Fade in={true}>
         <ViewPortPage>
           <HeroContainer>
             {this.state.currentWeather === null ? (
@@ -78,7 +79,7 @@ class App extends Component {
             )}
           </HeroContainer>
         </ViewPortPage>
-      </React.Fragment>
+      </Fade>
     );
   }
 }
