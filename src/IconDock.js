@@ -34,7 +34,7 @@ const Icon = styled.img`
 const StyledIconConstructor = (linkURL, iconURL, aKey) => {
   return (
     <LinkWrapper href={linkURL} key={"unique-" + aKey}>
-      <Icon src={iconURL} />>
+      <Icon src={iconURL} />
     </LinkWrapper>
   );
 };
