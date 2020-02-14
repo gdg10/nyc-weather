@@ -6,7 +6,7 @@ import gmailIcon from "./gmail_icon_white.png";
 import calendarIcon from "./calendar.png";
 import paperIcon from "./white-sheets.svg";
 
-import { GoMail } from "react-icons/go";
+// import { GoMail } from "react-icons/go";
 
 const IconUrlList = [
   calendarIcon,

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import CurrentWeather from "./CurrentWeather";
 import styled from "styled-components";
-import { Fade } from "react-bootstrap";
 import NewYorkHero0 from "./MidTown.jpg";
 import NewYorkHero1 from "./NewYorkHero1.jpg";
 import NewYorkHero2 from "./NewYorkHero2.jpg";
