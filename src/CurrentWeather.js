@@ -60,9 +60,9 @@ const CurrentWeather = ({ weather }) => {
     <Container style={ContainerStyle}>
       <FadeAnimationWrapper>
         <Row>
-          <Col>
+          <Col sm={12}>
             <SubGreeting2>
-              <Clock format={"h:mm A"} ticking={true} timezone={"US/Eastern"} />
+              <Clock format={"h:mm:ss A"} ticking={true} timezone={"US/Eastern"} />
             </SubGreeting2>
             <SubGreeting2>
               <Clock format={"dddd, MMMM Mo"} timezone={"US/Eastern"} />
@@ -75,21 +75,17 @@ const CurrentWeather = ({ weather }) => {
               )}
             </SubGreeting1>
           </Col>
-        </Row>
         {/* <Row>
           <Col xs={5}>
             <GoogleForm />
           </Col>
         </Row> */}
-        <Row>
-          <Col>
+          <Col sm={12}>
             <BounceAnimationWrapper>
               <IconDock />
             </BounceAnimationWrapper>
           </Col>
-        </Row>
-        <Row>
-          <Col>
+          <Col sm={12}>
             <BounceAnimationWrapper>
               <iframe
                 title="calendar"
