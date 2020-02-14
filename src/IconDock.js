@@ -6,13 +6,15 @@ import gmailIcon from "./gmail_icon_white.png";
 import calendarIcon from "./calendar.png";
 import paperIcon from "./white-sheets.svg";
 
+import { GoMail } from "react-icons/go";
+
 const IconUrlList = [
   calendarIcon,
   gitIcon,
   jiraIcon,
   gmailIcon,
   paperIcon,
-  jiraIcon
+  jiraIcon,
 ];
 const LinkUrlList = [
   "https://calendar.google.com/calendar/r",
@@ -45,6 +47,7 @@ const IconDock = () => {
       {IconUrlList.map((val, i) => {
         return StyledIconConstructor(LinkUrlList[i], val, i);
       })}
+      {/* <GoMail style={{color: 'white'}}/> */}
     </DocWrapper>
   );
 };
