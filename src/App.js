@@ -64,11 +64,9 @@ class App extends Component {
   }
 
   render() {
-
     const didMount = this.state.currentWeather !== null;
     return (
-        <ViewPortPage>
-          <Fade in={didMount}>
+      <ViewPortPage>
           <HeroContainer>
             {!didMount ? (
               " "
@@ -76,8 +74,7 @@ class App extends Component {
               <CurrentWeather weather={this.state.currentWeather} />
             )}
           </HeroContainer>
-          </Fade>
-        </ViewPortPage>
+      </ViewPortPage>
     );
   }
 }
