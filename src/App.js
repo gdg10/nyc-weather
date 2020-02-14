@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Fade from 'react-bootstrap/Fade';
 import CurrentWeather from "./CurrentWeather";
 import styled from "styled-components";
+import { Fade } from "react-bootstrap";
 import NewYorkHero0 from "./MidTown.jpg";
 import NewYorkHero1 from "./NewYorkHero1.jpg";
 import NewYorkHero2 from "./NewYorkHero2.jpg";
@@ -64,18 +64,20 @@ class App extends Component {
   }
 
   render() {
+
+    const didMount = this.state.currentWeather !== null;
     return (
-      <Fade in={true}>
         <ViewPortPage>
+          <Fade in={didMount}>
           <HeroContainer>
-            {this.state.currentWeather === null ? (
+            {!didMount ? (
               " "
             ) : (
               <CurrentWeather weather={this.state.currentWeather} />
             )}
           </HeroContainer>
+          </Fade>
         </ViewPortPage>
-      </Fade>
     );
   }
 }

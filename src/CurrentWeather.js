@@ -8,6 +8,7 @@ import Clock from "react-live-clock";
 
 const fadeAnimation = keyframes`${fadeIn}`;
 const bounceAnimation = keyframes`${flipInX}`;
+
 const FadeAnimationWrapper = styled.div`
   animation: 2s ${fadeAnimation};
 `;
