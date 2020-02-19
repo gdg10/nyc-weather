@@ -9,6 +9,8 @@ import NewYorkHero4 from "./NewYorkHero4.jpg";
 import NewYorkHero5 from "./NewYorkHero5.jpg";
 import NewYorkHero6 from "./NewYorkHero6.jpeg";
 
+//TODO: add react-spring
+
 const heroImages = [
   NewYorkHero0,
   NewYorkHero1,
