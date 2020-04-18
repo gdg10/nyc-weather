@@ -85,7 +85,7 @@ const CurrentWeather = ({ weather }) => {
               <IconDock />
             </BounceAnimationWrapper>
           </Col>
-          <Col sm={12}>
+          {/* <Col sm={12}>
             <BounceAnimationWrapper>
               <iframe
                 title="calendar"
@@ -102,7 +102,7 @@ const CurrentWeather = ({ weather }) => {
                 scrolling="no"
               ></iframe>
             </BounceAnimationWrapper>
-          </Col>
+          </Col> */}
         </Row>
       </FadeAnimationWrapper>
     </Container>

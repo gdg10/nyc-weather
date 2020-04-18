@@ -14,7 +14,7 @@ const IconUrlList = [
   jiraIcon,
   gmailIcon,
   paperIcon,
-  jiraIcon,
+  jiraIcon
 ];
 const LinkUrlList = [
   "https://calendar.google.com/calendar/r",
@@ -28,9 +28,23 @@ const DocWrapper = styled.div``;
 const LinkWrapper = styled.a``;
 const Icon = styled.img`
   margin: 20px 30px 10px 0px;
-  height: 3em;
-  width: 3em;
+  padding: 4px;
+  height: 4em;
+  width: 4em;
   float: left;
+  transition: 0.35s;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  :hover {
+    opacity: 1;
+    border: 2px solid white;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  :active {
+    opacity: 0.3;
+  }
 `;
 
 const StyledIconConstructor = (linkURL, iconURL, aKey) => {
