@@ -37,12 +37,13 @@ const Icon = styled.img`
   transition: 0.35s;
   border: 2px solid transparent;
   border-radius: 5px;
+  opacity: 0.9;
   :hover {
     opacity: 1;
     border: 2px solid white;
-    background: #232526;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526);
   }
   :active {
     opacity: 0.3;
